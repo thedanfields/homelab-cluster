@@ -1,0 +1,9 @@
+kind: GatewayClass
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
+  name: home-lab
+  namespace: home-lab
+  labels:
+    example: http-routing
+spec:
+  controllerName: gateway.envoyproxy.io/gatewayclass-controller
