@@ -9856,7 +9856,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: 'envoy-gateway'
-  namespace: 'default'
+  namespace: 'home-lab'
 ---
 # Source: gateway-helm/templates/proxy-rbac.yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -9876,7 +9876,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: 'envoy-gateway'
-  namespace: 'default'
+  namespace: 'home-lab'
 ---
 # Source: gateway-helm/templates/infra-manager-rbac.yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -9972,7 +9972,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: 'envoy-gateway'
-  namespace: 'default'
+  namespace: 'home-lab'
 ---
 # Source: gateway-helm/templates/leader-election-rbac.yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -9992,7 +9992,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: 'envoy-gateway'
-  namespace: 'default'
+  namespace: 'home-lab'
 ---
 # Source: gateway-helm/templates/envoy-gateway-metrics-service.yaml
 apiVersion: v1
@@ -10199,7 +10199,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: 'eg-gateway-helm-certgen'
-  namespace: 'default'
+  namespace: 'home-lab'
 ---
 # Source: gateway-helm/templates/certgen.yaml
 apiVersion: batch/v1
