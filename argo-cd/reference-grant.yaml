@@ -1,0 +1,12 @@
+kind: ReferenceGrant
+metadata:
+  name: argocd-server
+  namespace: argocd
+spec:
+  from:
+  - group: gateway.networking.k8s.io
+    kind: HTTPRoute
+    namespace: home-lab
+  to:
+  - group: ""
+    kind: Service
