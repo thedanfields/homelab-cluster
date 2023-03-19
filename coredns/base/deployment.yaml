@@ -21,6 +21,8 @@ spec:
             items:
             - key: Corefile
               path: Corefile
+            - key: HomeLabFile
+              path: homelab.db
       containers:
       - name: coredns
         image: coredns/coredns
