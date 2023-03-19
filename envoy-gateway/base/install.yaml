@@ -10034,6 +10034,7 @@ spec:
     control-plane: envoy-gateway
     app.kubernetes.io/name: gateway-helm
     app.kubernetes.io/instance: eg
+  type: LoadBalancer
   ports:
   - name: grpc
     port: 18000
