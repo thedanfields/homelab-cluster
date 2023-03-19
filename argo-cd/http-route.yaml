@@ -1,0 +1,13 @@
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: HTTPRoute
+metadata:
+  name: argo-cd-route
+spec:
+  parentRefs:
+    - name: home-lab
+  hostnames:
+    - "argo.home-lab"
+  rules:
+    - backendRefs:
+        - name: argocd-server
+          port: 443
