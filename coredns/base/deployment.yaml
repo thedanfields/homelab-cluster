@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: coredns
+        app.kubernetes.io/name: homelab-dns
     spec:
       volumes:
         - name: config-volume
