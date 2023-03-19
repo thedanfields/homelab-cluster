@@ -9069,7 +9069,7 @@ webhooks:
     clientConfig:
       service:
         name: gateway-api-admission-server
-        namespace: gateway-system
+        namespace: home-lab
         path: "/validate"
 ---
 apiVersion: v1
@@ -9078,7 +9078,7 @@ metadata:
   labels:
     name: gateway-api-webhook-server
   name: gateway-api-admission-server
-  namespace: gateway-system
+  namespace: home-lab
 spec:
   type: ClusterIP
   ports:
@@ -9092,7 +9092,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gateway-api-admission-server
-  namespace: gateway-system
+  namespace: home-lab
   labels:
     name: gateway-api-admission-server
 spec:
@@ -9146,7 +9146,7 @@ metadata:
   name: gateway-api-admission
   labels:
     name: gateway-api-webhook
-  namespace: gateway-system
+  namespace: home-lab
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -9177,7 +9177,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gateway-api-admission
-    namespace: gateway-system
+    namespace: home-lab
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -9186,7 +9186,7 @@ metadata:
   annotations:
   labels:
     name: gateway-api-webhook
-  namespace: gateway-system
+  namespace: home-lab
 rules:
   - apiGroups:
       - ''
@@ -9203,7 +9203,7 @@ metadata:
   annotations:
   labels:
     name: gateway-api-webhook
-  namespace: gateway-system
+  namespace: home-lab
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -9211,7 +9211,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gateway-api-admission
-    namespace: gateway-system
+    namespace: home-lab
 ---
 apiVersion: batch/v1
 kind: Job
@@ -9220,7 +9220,7 @@ metadata:
   annotations:
   labels:
     name: gateway-api-webhook
-  namespace: gateway-system
+  namespace: home-lab
 spec:
   template:
     metadata:
@@ -9254,7 +9254,7 @@ metadata:
   name: gateway-api-admission-patch
   labels:
     name: gateway-api-webhook
-  namespace: gateway-system
+  namespace: home-lab
 spec:
   template:
     metadata:
