@@ -19,6 +19,7 @@ spec:
           group: ""
           name: home-lab-ingress
     - name: passthrough
+      hostname: "argo.home.lab"
       protocol: TLS
       tls:
         mode: Passthrough
