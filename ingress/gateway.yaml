@@ -18,9 +18,3 @@ spec:
         - kind: Secret
           group: ""
           name: home-lab-ingress
-    - name: passthrough
-      hostname: "argo.home.lab"
-      protocol: TLS
-      tls:
-        mode: Passthrough
-      port: 443
