@@ -18,7 +18,7 @@ spec:
         - kind: Secret
           group: ""
           name: home-lab-ingress
-    - name: Passthrough
+    - name: passthrough
       protocol: TLS
       tls:
         mode: Passthrough
