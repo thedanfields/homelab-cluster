@@ -6,22 +6,22 @@ metadata:
 data:
   HomeLabFile: |
     $TTL    3600
-    $ORIGIN *.home-lab.
-    @                    IN  SOA   ns.*.home-lab. contact.*.home-lab. (
+    $ORIGIN home.lab.
+    @                    IN  SOA   ns.home.lab. contact.home.lab. (
                                                2023121301 ; serial
                                                1d ; refresh
                                                2h ; retry
                                                4w ; expire
                                                1h ; nxdomain ttl
                                               )
-                         IN  NS  ns.*.home-lab.
+                         IN  NS  ns.home.lab.
     @                    IN  A   192.168.186.202
     *                    IN  A   192.168.186.202
     @                    IN  A   10.109.120.14
     *                    IN  A   10.109.120.14
   Corefile: |
-    *.home-lab:53 {
-      file homelab.db
+    .home.lab:53 {
+      file db.home.lab
       log
       errors
       health :8080

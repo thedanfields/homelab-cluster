@@ -22,7 +22,7 @@ spec:
             - key: Corefile
               path: Corefile
             - key: HomeLabFile
-              path: homelab.db
+              path: db.home.lab
       containers:
       - name: coredns
         image: coredns/coredns
