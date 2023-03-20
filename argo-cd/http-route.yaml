@@ -6,7 +6,7 @@ spec:
   parentRefs:
     - name: home-lab
   hostnames:
-    - "argo.home-lab"
+    - "argo.home.lab"
   rules:
     - backendRefs:
         - name: argocd-server

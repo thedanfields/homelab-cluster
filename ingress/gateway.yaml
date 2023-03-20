@@ -3,8 +3,6 @@ kind: Gateway
 metadata:
   name: home-lab
   namespace: home-lab
-  labels:
-    example: http-routing
 spec:
   gatewayClassName: home-lab
   listeners:
