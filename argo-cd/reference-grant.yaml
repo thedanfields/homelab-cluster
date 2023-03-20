@@ -6,7 +6,7 @@ metadata:
 spec:
   from:
   - group: gateway.networking.k8s.io
-    kind: HttpRoute
+    kind: HTTPRoute
     namespace: home-lab
   to:
   - group: ""
