@@ -20,7 +20,7 @@ data:
     @                    IN  A   10.109.120.14
     *                    IN  A   10.109.120.14
   Corefile: |
-    .home.lab:53 {
+    home.lab:53 {
       file db.home.lab
       log
       errors
