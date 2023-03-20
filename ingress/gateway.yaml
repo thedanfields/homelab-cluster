@@ -18,3 +18,8 @@ spec:
         - kind: Secret
           group: ""
           name: home-lab-ingress
+    - name: Passthrough
+      protocol: TLS
+      tls:
+        mode: Passthrough
+      port: 443
