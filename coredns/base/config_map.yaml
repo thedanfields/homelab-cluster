@@ -21,7 +21,7 @@ data:
     *                    IN  A   10.109.120.14
   Corefile: |
     home.lab:53 {
-      file db.home.lab
+      file /etc/coredns/db.home.lab
       log
       errors
       health :8080
