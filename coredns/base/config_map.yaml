@@ -17,8 +17,6 @@ data:
                          IN  NS  ns.home.lab.
     @                    IN  A   192.168.186.202
     *                    IN  A   192.168.186.202
-    @                    IN  A   10.109.120.14
-    *                    IN  A   10.109.120.14
   Corefile: |
     home.lab:53 {
       file /etc/coredns/db.home.lab
