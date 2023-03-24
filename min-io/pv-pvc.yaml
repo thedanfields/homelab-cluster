@@ -6,6 +6,8 @@ metadata:
   labels:
     volume: min-io
 spec:
+  capacity:
+    storage: 2Gi
   storageClassName: nfs
   accessModes:
     - ReadWriteMany
