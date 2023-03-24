@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: nfs-client-provisioner
-    name: nfs-client-provisioner
   namespace: storage
+  name: nfs-client-provisioner
 spec:
   template:
     spec:
