@@ -4,6 +4,6 @@ metadata:
   name: nfs
 provisioner: lenny.cluster/nfs
 parameters:
-  server: nfs-server.example.com
+  server: lenny.cluster
   path: /media/storage/nfs_share/cluster
   readOnly: "false"
