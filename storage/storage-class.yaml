@@ -1,6 +1,9 @@
-kind: StorageClass
 apiVersion: storage.k8s.io/v1
+kind: StorageClass
 metadata:
-  name: manual
-provisioner: kubernetes.io/no-provisioner
-volumeBindingMode: WaitForFirstConsumer
+  name: nfs
+provisioner: lenny.cluster/nfs
+parameters:
+  server: nfs-server.example.com
+  path: /media/storage/nfs_share/cluster
+  readOnly: "false"

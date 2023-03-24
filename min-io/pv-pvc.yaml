@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: storage
+  namespace: min-io
+  labels:
+    volume: min-io
+spec:
+  storageClassName: nfs
+  accessModes:
+    - ReadWriteMany
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: auto-ripper
+  name: auto-ripper
+  labels:
+    app: auto-ripper
+spec:
+  storageClassName: nfs
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 20Gi
+  selector:
+    matchLabels:
+      volume: auto-ripper
