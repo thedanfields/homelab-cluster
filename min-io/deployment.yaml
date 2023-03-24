@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   # This name uniquely identifies the Deployment
   name: min-io
+  namespace: min-io
 spec:
   selector:
     matchLabels:
