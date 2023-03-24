@@ -4,7 +4,7 @@ metadata:
   name: nfs-client-provisioner
   labels:
     app: nfs-client-provisioner
-  namespace: stprage
+  namespace: storage
 spec:
   replicas: 1
   strategy:
