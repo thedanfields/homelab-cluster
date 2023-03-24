@@ -13,7 +13,7 @@ spec:
         - group: ""
           kind: Service
           name: min-io
-          port: 3000
+          port: 443
           weight: 1
       matches:
         - path:
