@@ -1,18 +1,4 @@
 apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: storage
-  namespace: min-io
-  labels:
-    volume: min-io
-spec:
-  capacity:
-    storage: 2Gi
-  storageClassName: nfs
-  accessModes:
-    - ReadWriteMany
----
-apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   namespace: min-io
