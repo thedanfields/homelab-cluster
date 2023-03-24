@@ -1,0 +1,21 @@
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: HTTPRoute
+metadata:
+  name: min-io
+  namespace: min-io
+spec:
+  parentRefs:
+    - name: home-lab
+  hostnames:
+    - "storage.home.lab"
+  rules:
+    - backendRefs:
+        - group: ""
+          kind: Service
+          name: min-io
+          port: 3000
+          weight: 1
+      matches:
+        - path:
+            type: PathPrefix
+            value: /
