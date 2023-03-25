@@ -44,8 +44,8 @@ spec:
         - name: MINIO_SECRET_KEY
           value: "minio123"
         - name: console  
-        - name: MINIO_BROWSER_REDIRECT_URL
-          value: http://storage.home.lab
+#- name: MINIO_BROWSER_REDIRECT_URL
+#          value: http://storage.home.lab
         ports:
         - containerPort: 9000
           name: api-port
