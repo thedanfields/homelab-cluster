@@ -26,12 +26,7 @@ spec:
       - name: minio
         # Pulls the default Minio image from Docker Hub
         image: minio/minio:latest
-        resources:
-          limits:
-            cpu: 200m
-            memory: 170Mi
-          requests:
-            cpu: 100m
+
         args:
         - server
         - /storage
