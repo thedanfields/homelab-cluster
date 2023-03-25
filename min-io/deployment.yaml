@@ -44,9 +44,16 @@ spec:
         - name: MINIO_SECRET_KEY
           value: "minio123"
         - name: console  
+        - name: MINIO_BROWSER_REDIRECT_URL
+          value: https://storage.home.lab
         ports:
         - containerPort: 9000
+          name: api-port
+          protocol: TCP
           hostPort: 9000
+        - containerPort: 9001
+          name: console-port
+          protocol: TCP
         # Mount the volume into the pod
         volumeMounts:
         - name: storage # must match the volume name, above
