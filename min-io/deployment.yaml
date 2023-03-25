@@ -26,9 +26,16 @@ spec:
       - name: minio
         # Pulls the default Minio image from Docker Hub
         image: minio/minio:latest
-
+        resources:
+          limits:
+            cpu: 200m
+            memory: 170Mi
+          requests:
+            cpu: 100m
         args:
         - server
+        - --console-address 
+        - :9001
         - /storage
         env:
         # Minio access key and secret key
@@ -36,6 +43,7 @@ spec:
           value: "minio"
         - name: MINIO_SECRET_KEY
           value: "minio123"
+        - name: console  
         ports:
         - containerPort: 9000
           hostPort: 9000
