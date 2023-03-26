@@ -4,7 +4,7 @@ metadata:
   name: loki
   namespace: loki
 spec:
-  project: loki
+  project: home-lab
   source:
     chart: loki
     repoURL: https://grafana.github.io/helm-charts
