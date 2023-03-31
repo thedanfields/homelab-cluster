@@ -12,7 +12,7 @@ spec:
     helm:
       releaseName: loki
       valueFiles:
-      - values_x.yaml
+      - values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: loki
