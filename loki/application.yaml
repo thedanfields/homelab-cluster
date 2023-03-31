@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: loki-3
+  name: loki
   namespace: argocd
 spec:
   project: home-lab
@@ -12,7 +12,7 @@ spec:
     helm:
       releaseName: loki
       valueFiles:
-      - values.yaml
+      - values_x.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: loki
