@@ -21,7 +21,7 @@ write:
     # -- Size of persistent disk
     size: 10Gi
     # -- Storage class to be used.
-    storageClass: nfs-client
+    storageClassName: nfs-client
 
 # Configuration for the read
 read:
@@ -31,7 +31,7 @@ read:
     # -- Size of persistent disk
     size: 10Gi
     # -- Storage class to be used.
-    storageClass: nfs-client
+    storageClassName: nfs-client
 
 # Configuration for the gateway
 gateway:
