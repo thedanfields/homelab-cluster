@@ -13,6 +13,12 @@ storage:
     s3forcepathstyle: true
     insecure: true
 
+backend:
+  replicas: 2
+  persistence:
+    size: 10Gi
+    storageClass: nfs-client
+
 # Configuration for the write
 write:
   # Number of replicas for the write
