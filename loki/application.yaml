@@ -8,7 +8,6 @@ spec:
   source:
     path: loki
     repoURL: https://github.com/thedanfields/homelab-cluster.git
-    targetRevision: 1.0.0
     helm:
       valueFiles:
       - values.yaml
