@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: loki
+  namespace: argocd
+spec:
+  project: home-lab
+  source:
+    path: loki
+    repoURL: https://github.com/thedanfields/homelab-cluster.git
+    targetRevision: 1.0.0
+    helm:
+      valueFiles:
+      - values.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: loki
