@@ -1,0 +1,7 @@
+name: homelab-loki
+version: 1.0.0
+apiVersion: v2
+dependencies:
+  - name: loki
+    version: 4.8.0
+    repository:  https://grafana.github.io/helm-charts
