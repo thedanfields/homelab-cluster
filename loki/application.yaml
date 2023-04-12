@@ -6,7 +6,7 @@ metadata:
 spec:
   project: home-lab
   source:
-    path: loki
+    chart: loki/homelab-loki
     repoURL: https://github.com/thedanfields/homelab-cluster.git
     helm:
       valueFiles:
