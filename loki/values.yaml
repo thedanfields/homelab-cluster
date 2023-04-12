@@ -13,52 +13,52 @@ loki:
       s3forcepathstyle: true
       insecure: true
 
-backend:
-  replicas: 2
-  persistence:
-    size: 10Gi
-    storageClass: nfs-client
+  backend:
+    replicas: 2
+    persistence:
+      size: 10Gi
+      storageClass: nfs-client
 
-# Configuration for the write
-write:
-  # Number of replicas for the write
-  replicas: 2
-  persistence:
-    # -- Size of persistent disk
-    size: 10Gi
-    # -- Storage class to be used.
-    storageClass: nfs-client
+  # Configuration for the write
+  write:
+    # Number of replicas for the write
+    replicas: 2
+    persistence:
+      # -- Size of persistent disk
+      size: 10Gi
+      # -- Storage class to be used.
+      storageClass: nfs-client
 
-  # Configuration for the read
-read:
-  # Number of replicas for the read
-  replicas: 2
-  persistence:
-    # -- Size of persistent disk
-    size: 10Gi
-    # -- Storage class to be used.
-    storageClass: nfs-client
+    # Configuration for the read
+  read:
+    # Number of replicas for the read
+    replicas: 2
+    persistence:
+      # -- Size of persistent disk
+      size: 10Gi
+      # -- Storage class to be used.
+      storageClass: nfs-client
 
-  # Configuration for the gateway
-  gateway:
-    # -- Specifies whether the gateway should be enabled
-    enabled: true
-    # -- Number of replicas for the gateway
-    replicas: 1
+    # Configuration for the gateway
+    gateway:
+      # -- Specifies whether the gateway should be enabled
+      enabled: true
+      # -- Number of replicas for the gateway
+      replicas: 1
 
-  # Disable mino installation
-  minio:
-    enabled: false
-
-  # Disable self-monitoring
-  monitoring:
-    selfMonitoring:
+    # Disable mino installation
+    minio:
       enabled: false
-      grafanaAgent:
-        installOperator: false
-      lokiCanary:
-          enabled: false
 
-  # Disable helm-test
-  test:
-    enabled: false
+    # Disable self-monitoring
+    monitoring:
+      selfMonitoring:
+        enabled: false
+        grafanaAgent:
+          installOperator: false
+        lokiCanary:
+            enabled: false
+
+    # Disable helm-test
+    test:
+      enabled: false
