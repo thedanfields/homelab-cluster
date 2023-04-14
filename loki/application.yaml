@@ -10,6 +10,9 @@ spec:
     repoURL: https://grafana.github.io/helm-charts
     targetRevision: 4.8.0
     helm:
+      parameters:
+      - name: "backend.replicas"
+        value: 23
       values: |
         storage:
           bucketNames:
