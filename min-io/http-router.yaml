@@ -14,7 +14,7 @@ spec:
           kind: Service
           name: min-io
           namespace: min-io
-          port: 9000
+          port: 9001
           weight: 1
       matches:
         - path:
