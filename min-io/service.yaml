@@ -9,8 +9,10 @@ spec:
     - port: 9000
       targetPort: 9000
       protocol: TCP
+      name: api-port
     - port: 9001
       targetPort: 9001
       protocol: TCP
+      name: console-port
   selector:
     app: min-io
