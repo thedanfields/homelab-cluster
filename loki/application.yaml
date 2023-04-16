@@ -11,6 +11,9 @@ spec:
     targetRevision: 4.8.0
     helm:
       values: |
+        loki:
+          auth_enabled: false
+
         storage:
           bucketNames:
             chunks: chunks
