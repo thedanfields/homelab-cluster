@@ -15,14 +15,18 @@ spec:
           auth_enabled: false
 
         storage:
+            boltdb_shipper:
+              active_index_directory: /loki/index
+              cache_location: /loki/index_cache
+              resync_interval: 5s
+              shared_store: s3
           bucketNames:
             chunks: chunks
             ruler: ruler
             admin: admin
           type: s3
           s3: # minio connect configuration
-            s3: null
-            endpoint: http://min-io.mini-io:9000
+            s3: http://minio:minio123@min-io.mini-io:.:9000/loki
             bucketnames: chunks
             access_key_id: minio
             secret_access_key: minio123
