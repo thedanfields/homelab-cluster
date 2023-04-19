@@ -14,7 +14,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-http-backend
+  name: storage-test
   namespace: storage-test
 spec:
   replicas: 1
@@ -46,7 +46,6 @@ spec:
           volumeMounts:
             - name: nfs-vol
               mountPath: "/mnt"
-      restartPolicy: "Never"
       volumes:
         - name: nfs-vol
           persistentVolumeClaim:
