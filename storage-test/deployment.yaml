@@ -1,0 +1,46 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: test-pvc
+  namespace: test-storage
+spec:
+  storageClassName: nfs-client
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-http-backend
+  namespace: test-storage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-http-backend
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: test-http-backend
+        version: v1
+  spec:
+    containers:
+    - name: test-storage
+      image: gcr.io/google_containers/busybox:1.24
+      command:
+        - "/bin/sh"
+      args:
+        - "-c"
+        - "touch /mnt/SUCCESS && exit 0 || exit 1"
+      volumeMounts:
+        - name: nfs-vol
+          mountPath: "/mnt"
+    restartPolicy: "Never"
+    volumes:
+      - name: nfs-vol
+        persistentVolumeClaim:
+          claimName: test-pvc
