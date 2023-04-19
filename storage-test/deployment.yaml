@@ -42,7 +42,7 @@ spec:
             - "/bin/sh"
           args:
             - "-c"
-            - "touch /mnt/SUCCESS && exit 0 || exit 1"
+            - "trap : TERM INT; sleep infinity & wait"
           volumeMounts:
             - name: nfs-vol
               mountPath: "/mnt"
