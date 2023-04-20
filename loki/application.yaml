@@ -21,7 +21,8 @@ spec:
             admin: admin
           type: s3
           s3: # minio connect configuration
-            s3: http://minio:minio123@min-io.mini-io:.:9000/loki
+            s3: null
+            endpoint: http://minio:minio123@min-io.mini-io:9000
             bucketnames: chunks
             access_key_id: minio
             secret_access_key: minio123
