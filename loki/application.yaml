@@ -22,7 +22,7 @@ spec:
           type: s3
           s3: # minio connect configuration
             s3: null
-            endpoint: http://minio:minio123@min-io.mini-io.:9000
+            endpoint: http://minio:minio123@min-io.mini-io.:9000/loki
             bucketnames: chunks
             access_key_id: minio
             secret_access_key: minio123
@@ -34,7 +34,7 @@ spec:
           replicas: 2
           persistence:
             size: 10Gi
-            storageClass: nfs-client
+            # storageClass: nfs-client
 
         # Configuration for the write
         write:
@@ -44,7 +44,7 @@ spec:
             # -- Size of persistent disk
             size: 10Gi
             # -- Storage class to be used.
-            storageClass: nfs-client
+            # storageClass: nfs-client
 
         # Configuration for the read
         read:
@@ -54,7 +54,7 @@ spec:
             # -- Size of persistent disk
             size: 10Gi
             # -- Storage class to be used.
-            storageClass: nfs-client
+            # storageClass: nfs-client
 
         # Configuration for the gateway
         gateway:
