@@ -45,7 +45,7 @@ spec:
           replicas: 2
           persistence:
             size: 10Gi
-            # storageClass: nfs-client
+            storageClass: nfs-client
 
         # Configuration for the write
         write:
@@ -55,7 +55,7 @@ spec:
             # -- Size of persistent disk
             size: 10Gi
             # -- Storage class to be used.
-            # storageClass: nfs-client
+            storageClass: nfs-client
 
         # Configuration for the read
         read:
@@ -65,7 +65,7 @@ spec:
             # -- Size of persistent disk
             size: 10Gi
             # -- Storage class to be used.
-            # storageClass: nfs-client
+            storageClass: nfs-client
 
         # Configuration for the gateway
         gateway:
