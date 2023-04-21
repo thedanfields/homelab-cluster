@@ -22,7 +22,7 @@ spec:
               schema: v12
               index:
                 prefix: loki_index
-                period: 24
+                period: 24h
 
           
         storage:
