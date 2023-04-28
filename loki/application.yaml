@@ -39,9 +39,9 @@ spec:
           
         storage:
           bucketNames:
-            chunks: chunks
-            ruler: ruler
-            admin: admin
+            chunks: loki
+            ruler: loki
+            admin: loki
           type: s3
           s3: # minio connect configuration
             s3: null
