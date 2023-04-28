@@ -45,7 +45,7 @@ spec:
           type: s3
           s3: # minio connect configuration
             s3: null
-            endpoint: http://min-io.mini-io:9000
+            endpoint: http://min-io.mini-io.svc
             bucketnames: loki
             access_key_id: minio
             accessKeyId: minio
