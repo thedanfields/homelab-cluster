@@ -53,12 +53,12 @@ spec:
           s3: # minio connect configuration
             s3: null
             endpoint: http://min-io.mini-io.svc
-            bucketnames: loki
+            bucketNames: loki
             access_key_id: minio
             accessKeyId: minio
             secret_access_key: minio123
             secretAccessKey: minio123
-            s3forcepathstyle: true
+            s3ForcePathStyle: true
             insecure: true
             region: null
 
