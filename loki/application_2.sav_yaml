@@ -14,6 +14,12 @@ spec:
         loki:
           auth_enabled: false
 
+          server:
+            http_listen_port: 3100
+            http_server_read_timeout: 300s
+            http_server_write_timeout: 180s
+            http_server_idle_timeout: 300s
+
           ingester:
             max_transfer_retries: 0
             chunk_idle_period: 1h
@@ -37,24 +43,24 @@ spec:
               resync_interval: 5s
               shared_store: s3
               cache_ttl: 1h
-          
-          storage:
-            bucketNames:
-              chunks: loki
-              ruler: loki
-              admin: loki
-            type: s3
-            s3: # minio connect configuration
-              s3: null
-              endpoint: http://min-io.mini-io.svc
-              bucketnames: loki
-              access_key_id: minio
-              accessKeyId: minio
-              secret_access_key: minio123
-              secretAccessKey: minio123
-              s3forcepathstyle: true
-              insecure: true
-              region: null
+
+        storage:
+          bucketNames:
+            chunks: loki
+            ruler: loki
+            admin: loki
+          type: 's3'
+          s3: # minio connect configuration
+            s3: null
+            endpoint: http://min-io.mini-io.svc
+            bucketnames: loki
+            access_key_id: minio
+            accessKeyId: minio
+            secret_access_key: minio123
+            secretAccessKey: minio123
+            s3forcepathstyle: true
+            insecure: true
+            region: null
 
         backend:
           replicas: 2
