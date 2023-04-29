@@ -36,6 +36,7 @@ spec:
               cache_location: /var/loki/index_cache
               resync_interval: 5s
               shared_store: s3
+              cache_ttl: 1h
           
         storage:
           bucketNames:
