@@ -94,19 +94,19 @@ spec:
             # -- Storage class to be used.
             storageClass: nfs-client
 
-        extraArgs:
-          - '-config.expand-env=true'
-        extraEnv:
-          - name: MINIO_ACCESS_KEY_ID
-            valueFrom:
-              secretKeyRef:
-                name: loki-minio-creds
-                key: MINIO_ACCESS_KEY_ID
-          - name: MINIO_SECRET_ACCESS_KEY
-            valueFrom:
-              secretKeyRef:
-                name: loki-minio-creds
-                key: MINIO_SECRET_ACCESS_KEY
+          extraArgs:
+            - '-config.expand-env=true'
+          extraEnv:
+            - name: MINIO_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: loki-minio-creds
+                  key: MINIO_ACCESS_KEY_ID
+            - name: MINIO_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: loki-minio-creds
+                  key: MINIO_SECRET_ACCESS_KEY
 
         # Configuration for the gateway
         gateway:
