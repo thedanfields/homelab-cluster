@@ -15,8 +15,8 @@ data:
                                                1h ; nxdomain ttl
                                               )
                          IN  NS  ns.home.lab.
-    @                    IN  A   192.168.186.202
-    *                    IN  A   192.168.186.202
+    @                    IN  A   192.168.186.203
+    *                    IN  A   192.168.186.203
   Corefile: |
     home.lab:53 {
       file /etc/coredns/db.home.lab
