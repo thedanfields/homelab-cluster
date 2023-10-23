@@ -66,6 +66,7 @@ spec:
         - group: ""
           kind: Service
           name: test-http-backend
+          namespace: test-http-backend
           port: 3000
           weight: 1
       matches:
