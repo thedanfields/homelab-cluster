@@ -6,7 +6,7 @@ metadata:
 spec:
   project: home-lab
   source:
-    chart: envoy-gateway
+    chart: gateway-helm
     repoURL: docker.io/envoyproxy
     targetRevision: v1.0.1
 
