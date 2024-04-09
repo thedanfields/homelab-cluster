@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: envoy-gateway
+  namespace: argocd 
+spec:
+  project: home-lab
+  source:
+    chart: envoygateway
+    repoURL: oci://docker.io/envoyproxy/
+    targetRevision: v1.0.1
+    helm:
+      values: |
+
+    destination:
+      server: "https://kubernetes.default.svc"
+      namespace: envoy-gateway
