@@ -15,4 +15,7 @@ spec:
       protocol: HTTPS
       port: 443
       tls:
-        mode: Passthrough
+        mode: Terminate
+        certificateRefs:
+        - kind: Secret
+          name: home-lab-https
