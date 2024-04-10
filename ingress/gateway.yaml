@@ -18,4 +18,4 @@ spec:
         mode: Terminate
         certificateRefs:
         - kind: Secret
-          name: home-lab-https
+          name: home-lab-tls
