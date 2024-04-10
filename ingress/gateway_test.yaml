@@ -5,6 +5,7 @@ metadata:
   namespace: cert-manager
   annotations:
     cert-manager.io/cluster-issuer: lcl-lab-issuer
+    cert-manager.io/issue-temporary-certificate: "true"
 spec:
   gatewayClassName: home-lab
   listeners:
