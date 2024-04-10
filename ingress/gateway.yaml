@@ -4,7 +4,7 @@ metadata:
   name: home-lab
   namespace: envoy-gateway
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
+    cert-manager.io/cluster-issuer: lcl-lab-issuer
 spec:
   gatewayClassName: home-lab
   listeners:
