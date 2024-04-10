@@ -12,9 +12,7 @@ spec:
     helm:
       values: |
         installCRDs: true
-        featureGates: "ExperimentalGatewayAPISupport"
-        webhook.featureGates: "ExperimentalGatewayAPISupport"
-        cainjector.featureGates: "ExperimentalGatewayAPISupport"
+        featureGates: "ExperimentalGatewayAPISupport=true"
 
     destination:
       server: "https://kubernetes.default.svc"
