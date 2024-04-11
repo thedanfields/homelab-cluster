@@ -1,0 +1,92 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: echo-server
+  namespace: echo-server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-server
+  namespace: echo-server
+  labels:
+    app: echo-server
+    service: echo-server
+spec:
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+  selector:
+    app: echo-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-server
+  namespace: echo-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo-server
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: echo-server
+        version: v1
+    spec:
+      serviceAccountName: echo-server
+      containers:
+        - image: gcr.io/k8s-staging-ingressconformance/echoserver:v20221109-7ee2f3e
+          imagePullPolicy: IfNotPresent
+          name: backend
+          ports:
+            - containerPort: 3000
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: echo-server
+  namespace: ingress
+spec:
+  parentRefs:
+    - name: home-lab-ingress
+  hostnames:
+    - "echo-server.lcl-lab.com"
+  rules:
+    - backendRefs:
+        - group: ""
+          kind: Service
+          name: echo-server
+          namespace: echo-server
+          port: 3000
+          weight: 1
+      matches:
+        - path:
+            type: PathPrefix
+            value: /
+---
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: ReferenceGrant
+metadata:
+  name: echo-server
+  namespace: echo-server
+spec:
+  from:
+  - group: gateway.networking.k8s.io
+    kind: HTTPRoute
+    namespace: ingress
+  to:
+  - group: ""
+    kind: Service
