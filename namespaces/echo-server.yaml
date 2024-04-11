@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: echo-server
+  labels:
+    name: echo-server
