@@ -61,7 +61,7 @@ metadata:
   namespace: cert-manager
 spec:
   parentRefs:
-    - name: home-lab
+    - name: home-lab-test
   hostnames:
     - "canary.lcl-lab.com"
   rules:
