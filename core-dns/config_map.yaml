@@ -6,7 +6,7 @@ metadata:
 data:
   HomeLabFile: |
     $TTL    3600
-    $ORIGIN home.lab.
+    $ORIGIN lcl-lab.
     @                    IN  SOA   ns.lcl-lab. contact.lcl-lab. (
                                                2023121301 ; serial
                                                1d ; refresh
@@ -18,7 +18,7 @@ data:
     @                    IN  A   192.168.186.205
     *                    IN  A   192.168.186.205
   Corefile: |
-    home.lab:53 {
+    lcl-lab:53 {
       file /etc/coredns/db.home.lab
       log
       errors
