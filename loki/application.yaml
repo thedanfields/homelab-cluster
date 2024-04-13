@@ -30,7 +30,7 @@ spec:
               store: tsdb
               schema: v13
               index:
-                prefix: loki_index
+                prefix: loki-index
                 period: 24h
 
           storage_config:
