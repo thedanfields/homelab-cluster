@@ -4,6 +4,9 @@ metadata:
   name: loki
   namespace: loki
 spec:
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: loki
   source:
     chart: loki
     repoURL: https://grafana.github.io/helm-charts
