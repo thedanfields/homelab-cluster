@@ -35,11 +35,11 @@ spec:
             - name: PROVISIONER_NAME
               value: k8s-sigs.io/nfs-subdir-external-provisioner
             - name: NFS_SERVER
-              value: lenny.cluster
+              value: 192.168.186.174
             - name: NFS_PATH
               value: /media/storage/nfs_share/cluster
       volumes:
         - name: nfs-client-root
           nfs:
-            server: lenny.cluster
+            server: 192.168.186.174
             path: /media/storage/nfs_share/cluster
