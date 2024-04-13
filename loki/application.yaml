@@ -4,7 +4,6 @@ metadata:
   name: loki
   namespace: loki
 spec:
-  project: home-lab
   source:
     chart: loki
     repoURL: https://grafana.github.io/helm-charts
@@ -131,6 +130,3 @@ spec:
         # Disable helm-test
         test:
           enabled: false
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: loki
