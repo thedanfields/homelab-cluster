@@ -7,16 +7,16 @@ data:
   HomeLabFile: |
     $TTL    3600
     $ORIGIN home.lab.
-    @                    IN  SOA   ns.home.lab. contact.home.lab. (
+    @                    IN  SOA   ns.lcl-lab. contact.lcl-lab. (
                                                2023121301 ; serial
                                                1d ; refresh
                                                2h ; retry
                                                4w ; expire
                                                1h ; nxdomain ttl
                                               )
-                         IN  NS  ns.home.lab.
-    @                    IN  A   192.168.186.203
-    *                    IN  A   192.168.186.203
+                         IN  NS  ns.lcl-lab.
+    @                    IN  A   192.168.186.205
+    *                    IN  A   192.168.186.205
   Corefile: |
     home.lab:53 {
       file /etc/coredns/db.home.lab
