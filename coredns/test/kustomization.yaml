@@ -1,8 +1,0 @@
-bases:
-- ../base
-
-namespace: test-home-lab
-
-images:
-- name: coredns/coredns
-  newTag: 1.10.1

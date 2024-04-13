@@ -28,7 +28,7 @@ data:
     }
 
     .:53 {
-      forward . 192.168.186.3
+      forward . 208.67.222.123
       log
       errors
       health :8080
