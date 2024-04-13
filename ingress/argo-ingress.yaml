@@ -1,3 +1,6 @@
+# edit the argocd-cmd-params-cm and add the "server.insecure: "true" flag b/c tls terminates at the gateway
+# otherwise we get "Too many redirects" error
+
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
