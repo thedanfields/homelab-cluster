@@ -4,6 +4,7 @@ metadata:
   name: loki
   namespace: loki
 spec:
+  project: home-lab
   destination:
     server: "https://kubernetes.default.svc"
     namespace: loki
