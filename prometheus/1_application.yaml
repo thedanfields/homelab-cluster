@@ -9,7 +9,7 @@ spec:
   project: home-lab
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
-    path: charts/kube-prometheus-stack/crds/
+    path: charts/kube-prometheus-stack/charts/crds/
     targetRevision: v58.2.0
     directory:
       recurse: true
