@@ -8,12 +8,12 @@ spec:
   source:
     chart: promtail
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 6.11.0
+    targetRevision: 6.15.5
     helm:
       values: |
         config:
           clients:
-            - url: http://loki-gateway.loki.svc.cluster.local/loki/api/v1/push
+            - url: http://loki-gateway.loki:80/loki/api/v1/push
             
  
   destination:
